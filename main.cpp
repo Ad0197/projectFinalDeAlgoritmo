@@ -1,17 +1,22 @@
-#include<iostream>
-#include<string>
-#include "io.h"
+#include "Material.cpp"
 
 using namespace std;
 
-void imprimir(string word){
-	word = word.find(",");
-	cout<<word[0];
-}
-
 int main (int argc, char *argv[]) {
-	getMapRegister("map.bin");
-	cout<<"Hola Mundo";
+	cout<<"Vamos a ver"<<endl;
+	Material material = Material();
+	Material material2 = Material();
+	material.nombreMaterial= "ladrilla";
+	material.factorDeducible = 0.10f;
+	material.create();
+	material2.nombreMaterial = "hipnosis";
+	material2.create();
+	list<Material> mats = material2.getAll();
+	list<Material> :: iterator it;
+	for(it = mats.begin(); it != mats.end(); it++){
+		it->imprimir();
+	}
 	return 0;
 }
+
 
