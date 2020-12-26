@@ -1,3 +1,5 @@
+#include "Material.h"
+#include <string>
 
 using namespace std;
 

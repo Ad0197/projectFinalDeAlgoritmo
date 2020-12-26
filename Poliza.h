@@ -1,6 +1,4 @@
 #include <list>
-#include "Inmueble.h"
-#include "Deducible.h"
 
 using namespace std;
 
@@ -14,7 +12,7 @@ class Poliza {
         ~Poliza();
 
         void create();
-        void subtotal();
+        float subtotal();
         void findById(int id);
 
         void imprimir();

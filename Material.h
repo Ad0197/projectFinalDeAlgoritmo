@@ -1,3 +1,5 @@
+#include <string>
+#include <list>
 
 using namespace std;
 #ifndef MATERIAL_H

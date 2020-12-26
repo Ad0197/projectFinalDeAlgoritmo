@@ -19,7 +19,7 @@ Poliza::~Poliza() {}
 
 void Poliza::imprimir()
 {
-    cout << "==========================================" << endl;
+    cout << "\n==========================================" << endl;
     cout << "ID: " << this->id << endl;
     cout << "Subtotal: " << this->subtotal() << endl;
 
@@ -27,7 +27,7 @@ void Poliza::imprimir()
 
     list<Deducible>::iterator itDe;
 
-    for (itDe = this->deducibles.begin(); itDe != this->deducibles.end(); it++)
+    for (itDe = this->deducibles.begin(); itDe != this->deducibles.end(); itDe++)
     {
         Deducible dedu = *itDe;
         dedu.imprimir();
@@ -60,7 +60,7 @@ void Poliza::findById(int id)
     this->id = pol.id;
 }
 
-void Poliza::subtotal()
+float Poliza::subtotal()
 {
     float subTotal, base;
     Material material;
@@ -84,16 +84,17 @@ void registroPoliza()
     int idInmueble;
     int id, n;
     cout << "Introdusca el id del inmueble: ";
-    cin >> id;
-    inmueble.findById(id);
+    cin >> idInmueble;
+    inmueble.findById(idInmueble);
     cout << "Introdusca la cantidad de deducible a registrar: ";
     cin >> n;
-    for (int i = 0, i < n; ++i)
+    for (int i = 0; i < n; ++i)
     {
         Deducible deducible;
         cout << "Introdusca el id del deducible #" << i << ":";
         cin >> id;
         deducible.findById(id);
+        deducible.imprimir();
         listD.push_back(deducible);
     }
     Poliza poliza;

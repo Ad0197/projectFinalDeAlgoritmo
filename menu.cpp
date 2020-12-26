@@ -128,3 +128,28 @@ void menuPoliza()
         system("cls");
     }
 }
+
+void init(){
+    Material material;
+    material.nombreMaterial = "Ladrillo";
+    material.factorDeducible = 0.01;
+    material.create();
+
+    Inmueble inmueble;
+    inmueble.nombre = "Casa de Adrison";
+    inmueble.direccion = "Calle por ahi";
+    inmueble.telefono = "8092954338";
+    inmueble.reemplazo = false;
+    inmueble.material.findById(0);
+    inmueble.create();
+
+    Deducible deducible;
+    deducible.nombreDeducible = "Deducible huracan";
+    deducible.factorDedusible = 0.01;
+    deducible.create();
+
+    Deducible deducible2;
+    deducible2.nombreDeducible = "Deducible normal";
+    deducible.factorDedusible = 0.05;
+    deducible2.create();
+}
