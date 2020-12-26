@@ -1,7 +1,3 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <list>
 
 using namespace std;
 #ifndef MATERIAL_H
@@ -10,9 +6,6 @@ using namespace std;
 
 class Material
 {
-private:
-	string filename = "main-material.bin";
-
 public:
 	int id;
 	string nombreMaterial;
@@ -25,7 +18,7 @@ public:
 	void imprimir();
 	list<Material> getAll();
 	bool create();
-	Material findById(int id);
+	void findById(int id);
 
 };
 
