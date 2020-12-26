@@ -1,14 +1,20 @@
+#include <string>
 #ifndef DEDUCIBLE_H
 #define DEDUCIBLE_H
 
-class Deducible {
+class Deducible
+{
 public:
 	int idDeducible;
-	int nombreDeducible;
+	string nombreDeducible;
 	float factorDedusible;
+
 	Deducible();
 	~Deducible();
+
+	void imprimir();
+	void create();
+	void findById(int id);
 };
 
 #endif
-
